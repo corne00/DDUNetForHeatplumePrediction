@@ -1,6 +1,11 @@
 # Model Training and Hyperparameter Search
 This repository contains code for hyperparameter optimization and training of a machine learning model using PyTorch. It also includes functionality for evaluating the trained model and reproducing results from the associated paper "Few-Shot Learning by Explicit Physics Integration: An Application to Groundwater Heat Transport".
 
+The code is largely based on the following two GitHub repositories:
+- https://github.com/JuliaPelzer/Heat-Plume-Prediction/
+-
+
+
 ## Table of Contents:
 
 1. Some important files
