@@ -1,5 +1,5 @@
 # Model Training and Hyperparameter Search
-This repository contains code for hyperparameter optimization and training of a machine learning model using PyTorch. It also includes functionality for evaluating the trained model and reproducing results from the associated research paper.
+This repository contains code for hyperparameter optimization and training of a machine learning model using PyTorch. It also includes functionality for evaluating the trained model and reproducing results from the associated paper "Few-Shot Learning by Explicit Physics Integration: An Application to Groundwater Heat Transport".
 
 ## Table of Contents:
 
