@@ -1,0 +1,30 @@
+data:
+  scenario: full              # Choice of scenario should be one of "step1", "step2", "step3", "full"
+  batch_size_training: 2      # Batch size used for training
+  batch_size_testing: 2       # Batch size used for testing and validation
+  subdomains_dist:            # Distribution of subdomains in x and y direction
+  - 1
+  - 1
+  patch_size: 2560            # Size of the patches used for training
+  include_pressure: false     # Whether to include the pressure field in the inputs or not
+model:
+  UNet:
+    num_channels: 5
+    complexity: 8             # Complexity level (number of features in the first layer)
+    depth: 6                  # Depth of the encoder-decoder model
+    num_convs: 3              # Number of convolutions in each UNet-block
+  comm:
+    comm: false               # Enable coarse network
+    num_comm_fmaps: 0         # Number of feature maps sent to the coarse network
+    exchange_fmaps: false     # Enable feature map exchange between subdomains
+  kernel_size: 3              # Size of the used convolutional kernel
+  padding: null               # Padding size
+  dropout_rate: 0.0           # Dropout used during training of netork
+training:
+  num_epochs: 100             # Number of training epochs
+  train_loss: energy
+  val_loss: huber_loss        # Validation loss function
+  adam_weight_decay: 0.1      # Weight decay value for the Adam optimizer
+  lr: 0.00018                 # Learning rate value
+  num_samples_overfitting: null # Number of samples for overfitting on one dataset (train = test = val dataset). If null, full dataset is used.
+  max_dataset_size: null      # Cap the number of training data points at a certain number (max_dataset_size). If null, all training data is used

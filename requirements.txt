@@ -1,0 +1,4 @@
+numpy==1.24.0
+optuna==4.0.0
+torch==2.1.0
+torchmetrics==1.7.1

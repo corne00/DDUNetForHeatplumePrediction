@@ -1,0 +1,22 @@
+step1:
+  n_inputs: 3
+  n_outputs: 2
+  dir: ./data/dataset_giant_square_100hp_varyK_1000dp inputs_pki outputs_xy/
+  scaling_dir: ./data/scaling test data/giant_double_100hp_v2 inputs_pki outputs_xy/
+  test_data_lgcnn: ./data/test_data_from_LGCNN/dataset_giant_100hp_varyK inputs_pki outputs_xy/
+step2:
+  n_inputs: 3
+  n_outputs: 2
+  dir: ./data/dataset_giant_square_100hp_varyK_1000dp inputs_xy outputs_s+s_outer/
+step3:
+  n_inputs: 6
+  n_outputs: 1
+  dir: ./data/dataset_giant_square_100hp_varyK_1000dp inputs_ixydk+s_outer outputs_t/
+  scaling_dir: ./data/scaling test data/giant_double_100hp_v2 inputs_ixydk+s_outer outputs_t/
+  test_data_lgcnn: ./data/test_data_from_LGCNN/dataset_giant_100hp_varyK inputs_ixydk+s_outer outputs_t/
+full:
+  n_inputs: 3
+  n_outputs: 1
+  dir: ./data/dataset_giant_square_100hp_varyK_1000dp inputs_pki outputs_t/
+  scaling_dir: ./data/scaling test data/giant_double_100hp_v2 inputs_pki outputs_t/
+  test_data_lgcnn: ./data/test_data_from_LGCNN/dataset_giant_100hp_varyK inputs_pki outputs_t/
