@@ -3,7 +3,7 @@ This repository contains code for hyperparameter optimization and training of a 
 
 The code is largely based on the following two GitHub repositories:
 - https://github.com/JuliaPelzer/Heat-Plume-Prediction/
--
+- https://github.com/corne00/DDU-Net/
 
 
 ## Table of Contents:
